@@ -13,13 +13,13 @@ import { DeleteButtonComponent } from './favorites/delete-button/delete-button.c
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FavoritesComponent } from './favorites/favorites.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 const appRoutes: Routes = [
   { path: '', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'favorites', component: FavoritesComponent},
+  { path: 'favorites', canActivate: [AuthGuard], component: FavoritesComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
 
@@ -42,7 +42,8 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
