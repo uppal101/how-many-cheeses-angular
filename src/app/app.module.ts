@@ -13,12 +13,14 @@ import { DeleteButtonComponent } from './favorites/delete-button/delete-button.c
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'favorites', component: FavoritesComponent}
+  { path: 'favorites', component: FavoritesComponent},
+  { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
     DeleteButtonComponent,
     SignupComponent,
     SigninComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
