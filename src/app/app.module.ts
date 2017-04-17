@@ -6,11 +6,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './favorites/header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FavoritesTableComponent } from './favorites-table/favorites-table.component';
-import { UpdateButtonComponent } from './update-button/update-button.component';
-import { DeleteButtonComponent } from './delete-button/delete-button.component';
+import { FavoritesTableComponent } from './favorites/favorites-table/favorites-table.component';
+import { UpdateButtonComponent } from './favorites/update-button/update-button.component';
+import { DeleteButtonComponent } from './favorites/delete-button/delete-button.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FavoritesComponent } from './favorites/favorites.component';
@@ -18,7 +18,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 
 const appRoutes: Routes = [
   { path: '', component: SigninComponent},
-  { path: 'signup', component: SignupComponent}
+  { path: 'signup', component: SignupComponent},
+  { path: 'favorites', component: FavoritesComponent}
 ];
 
 @NgModule({
