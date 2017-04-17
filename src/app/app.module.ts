@@ -7,7 +7,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './favorites/header/header.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { FavoritesTableComponent } from './favorites/favorites-table/favorites-table.component';
 import { UpdateButtonComponent } from './favorites/update-button/update-button.component';
 import { DeleteButtonComponent } from './favorites/delete-button/delete-button.component';
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavigationComponent,
     FavoritesTableComponent,
     UpdateButtonComponent,
     DeleteButtonComponent,
