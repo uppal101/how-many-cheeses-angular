@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <app-navigation></app-navigation>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <br>
+      <app-header></app-header>
+      <br>
+      <app-favorites-table></app-favorites-table>
+      <app-update-button></app-update-button>
+      <app-delete-button></app-delete-button>
+    </div>
+  </div>
+</div>
