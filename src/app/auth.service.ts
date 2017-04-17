@@ -1,4 +1,10 @@
 export class AuthService {
+  signupUser(email: string, password: 'string') {
+    // .createUserWithEmailAndPassword(email, password)
+    //   .catch(
+    //     error => console.log(error)
+    //   )
+  }
   loggedIn = false
 
   isAuthenticated() {
