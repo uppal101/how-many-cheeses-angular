@@ -17,7 +17,7 @@
         <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a password!</span>
       </div>
       <button class="btn btn-primary" type="submit"
-      [disabled]="!f.valid">Sign Up</button>
+      [disabled]="!f.valid" (click)="addUser()">Sign Up</button>
     </form>
   </div>
 </div>
