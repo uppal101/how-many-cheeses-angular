@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <form (ngSubmit)="onSignup()" #f="ngForm">
       <div class="form-group">
@@ -20,4 +20,14 @@
       [disabled]="!f.valid" (click)="addUser()">Sign Up</button>
     </form>
   </div>
-</div>
+</div> -->
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)">
+  <div class="form-group">
+    <input formControlName="email" placeholder="Email" class="form-control">
+  </div>
+  <div class="form-group">
+    <input formControlName="password" type="password" name="password" placeholder="password" class="form-control">
+  </div>
+  <button class="btn btn-primary">Sign Up</button>
+</form>
