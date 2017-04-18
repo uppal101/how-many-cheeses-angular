@@ -15,6 +15,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { SignUpService} from './auth/signup/signup.service'
 
 const appRoutes: Routes = [
   { path: '', component: SigninComponent},
@@ -42,7 +43,7 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, SignUpService],
   bootstrap: [AppComponent]
 })
 
