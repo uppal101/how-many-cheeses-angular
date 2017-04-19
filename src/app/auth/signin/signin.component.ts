@@ -32,22 +32,21 @@ export class SigninComponent implements OnInit {
   signinForm: FormGroup;
   user: Object;
   constructor(private http: Http, @Inject(FormBuilder) fb: FormBuilder) {
-      this.signinForm = fb.group({
-          email: '',
-          password: ''
-      })
-   }
+    this.signinForm = fb.group({
+      email: '',
+      password: ''
+    });
+  }
 
   ngOnInit() {
   }
   onSignin(values: string): any {
     const url = 'https://cheeswhiz.herokuapp.com/api/user/login';
-    console.log('values', values)
+    console.log('values', values);
     this.http.post(url, values)
       .subscribe((res: Response) => {
         this.user = res.json();
-        console.log('user', this.user)
-      })
+        console.log('user', this.user);
+      });
   }
-
 }

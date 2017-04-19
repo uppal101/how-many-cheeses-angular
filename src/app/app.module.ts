@@ -13,9 +13,10 @@ import { DeleteButtonComponent } from './favorites/delete-button/delete-button.c
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FavoritesComponent } from './favorites/favorites.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';import { AuthGuard } from './auth-guard.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
-import { SignUpService} from './auth/signup/signup.service'
+import { SignUpService} from './auth/signup/signup.service';
 
 const appRoutes: Routes = [
   { path: '', component: SigninComponent},
